@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %} AgroPro {% endblock %}
+
+{% block menu %}
+<div class="menu">
+    <nav>
+        <ul>
+            <li><a href="{% url 'ingresar'%}">Ingresar</a>
+            </li>
+            <li><a href="{% url 'registro' %}">Registrarse</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+{% endblock %}
+
+{% block contenido %}
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <video src="{% static 'Imagenes/LogoAgroPro.mp4' %}" autoplay muted loop class="d-block"></video>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'Imagenes/imagen2.png' %}" class="d-block" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'Imagenes/imagen3.png' %}" class="d-block" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+</div>
+<hr>
+</hr>
+<div class="quienesSomos">
+    <h1>¿Quienes Somos?</h1>
+    <p>
+        Actualmente, la agricultura en los distintos departamentos tucumanos, de la provincia Tucumán, Argentina se
+        desarrolla de una manera rústica, ya que en la mayoría de los casos es llevada a cabo sólo en base a la
+        experiencia del agricultor, es decir, la manera en que se distribuirán o aprovecharán los recursos se decide
+        generalmente según la intuición del agricultor, lo que puede perjudicar al mismo de diversas maneras llevándolo,
+        incluso, a la ruina.
+    </p>
+    <p>
+        Analizando lo antes mencionado nos hemos propuesto desarrollar el sistema informático AgroPro que, mediante
+        inteligencia artificial, pueda recomendar y dar apoyo a la toma de decisiones de los agricultores. Para cumplir
+        con este objetivo se tendrán en cuenta datos de la actividad como ser ubicación, tipo de cultivo, condiciones
+        climatológicas del lugar, entre otras. A partir de estos datos y su procesamiento se formulará una recomendación
+        al agricultor sobre qué acciones debería tomar para, por ejemplo, prevenir pérdidas de cultivo por inclemencias
+        meteorológicas.
+    </p>
+    <p>
+        Pretendemos entonces con <b>AgroPro</b> que el sistema desarrollado sea una herramienta eficaz al momento de su
+        utilización por parte de un agricultor, llevando a este último a obtener distintos beneficios.
+    </p>
+</div>
+{% endblock %}

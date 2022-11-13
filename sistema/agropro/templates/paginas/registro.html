@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %} AgroPro - Registro {% endblock %}
+
+{% block menu %}
+<div class="titulo-ingresar">
+    <h1>Registro</h1>
+</div>
+{% endblock %}
+
+{% block contenido %}
+<div class="row justify-content-center formContainerReg">
+    <div class="col-4 formDatosReg">
+        <form class="formDatosCampos">
+            <h1>DATOS</h1>
+            <label for="">Nombre <input type="text" required></label>
+            <label for="">Apellido <input type="text" required></label>
+            <label for="">Dni <input type="text" required></label>            
+            <label for="">Email <input type="email" required></label>
+            <label for="">Contraseña <input type="password" required></label>
+            <label for="">Cultivo
+                <select name="" id=""></select>
+            </label>
+            <label for="">Ubicación
+                <select name="" id=""></select>
+            </label>            
+        </form>
+        <a><button id="ingresarPerfil">Ingresar</button></a>
+    </div>
+</div>
+<div class="row botonesFinal">
+    <a href="{% url 'index' %}"><button>ATRAS</button></a>
+    <a href=""><button type="submit">CERRAR SESION</button></a>
+</div>
+{% endblock %}

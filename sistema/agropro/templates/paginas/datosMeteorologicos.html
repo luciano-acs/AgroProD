@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %} AgroPro - Datos Meteorologicos {% endblock %}
+
+{% block menu %}
+<div class="titulo-ingresar">
+    <h1>Datos Meteorológicos</h1>
+</div>
+{% endblock %}
+
+{% block contenido %}
+<div class="row datosMeteoro">
+    <div class="col-4 lluvias">
+        <h1>LLuvias</h1>
+        <a><button onclick="cargarTablaLluvia()">Obtener info</button></a>
+        <canvas id="graficaLluvias" width="400" height="350"></canvas>
+        <table class="table tablaLluvia">
+            <thead>
+                <tr>
+                    <th scope="col">Dia</th>
+                    <th scope="col">Cantidad (mm)</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpoTabla1">
+            </tbody>
+        </table>
+        <p id="parrafoLluvia">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex tempora voluptatibus
+            nemo? Quibusdam
+            libero quidem porro minus, blanditiis veritatis sequi omnis ex quae eligendi velit mollitia nostrum
+            officia enim exercitationem?</p>
+    </div>
+    <div class="col-4 vientos">
+        <h1>Vientos</h1>
+        <a><button onclick="cargarTablaVientos()">Obtener info</button></a>
+        <canvas id="graficaVientos" width="400" height="350"></canvas>
+        <table class="table tablaViento">
+            <thead>
+                <tr>
+                    <th scope="col">Dia</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Velocidad (Km)</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpoTabla2">
+            </tbody>
+        </table>
+        <p id="parrafoViento">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi pariatur
+            assumenda sequi dolorem
+            recusandae rerum voluptatibus ullam obcaecati suscipit, velit hic repellendus eaque provident vero,
+            veritatis incidunt dignissimos aspernatur dolor.
+        </p>
+    </div>
+    <div class="col-4 temperaturas">
+        <h1>Temperatura</h1>
+        <a><button onclick="cargarTablaTemp()">Obtener info</button></a>
+        <canvas id="graficaTemperaturas" width="400" height="350"></canvas>
+        <table class="table tablaTemperatura">
+            <thead>
+                <tr>
+                    <th scope="col">Dia</th>
+                    <th scope="col">Temperatura min. (C°)</th>
+                    <th scope="col">Temperatura máx. (C°)</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpoTabla3">
+            </tbody>
+        </table>
+        <p id="parrafoTemperatura">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam labore
+            obcaecati sit aperiam adipisci
+            itaque veniam tenetur expedita veritatis recusandae harum ab quam ipsum atque soluta, cum impedit
+            ratione neque?
+        </p>
+
+    </div>
+</div>
+<div class="row botonesFinal">
+    <a href="{% url 'perfil' %}"><button>ATRAS</button></a>
+    <a href=""><button>CERRAR SESION</button></a>
+</div>
+{% endblock %}

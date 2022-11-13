@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %} AgroPro - Ingresar {% endblock %}
+
+{% block menu %}
+<div class="titulo-ingresar">
+    <h1>Ingresar</h1>                
+</div>
+{% endblock %}
+
+{% block contenido %}
+<div class="formContainer">
+    <form action="" class="formIngresar">
+        <label for="">Usuario <input id="usuario" type="email" required></label>
+        <label for="">Contraseña <input id="password" type="password" required></label>                
+    </form>
+    <a><button id="ingresarPerfil">Ingresar</button></a>
+</div>
+{% endblock %}
