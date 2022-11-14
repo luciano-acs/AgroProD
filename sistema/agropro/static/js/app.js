@@ -1,12 +1,7 @@
-const cuentaUsuario = {
-    usuario: 'admin@admin.com',
-    contraseña: 'admin'
-};
-
 function login() {
     const usuario = document.getElementById('usuario').value;
     const password = document.getElementById('password').value;
-    if (usuario == cuentaUsuario.usuario && password == cuentaUsuario.contraseña) {
+    if (usuario == 'juan.perez@gmail.com' && password == 'juanperez') {
         window.location.href = "/" + "perfil";
     } else {
         alert('Usuario o contraseña incorrectos');

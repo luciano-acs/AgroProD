@@ -307,17 +307,17 @@ button{
     margin-top: 25px;
 }
 
-.categorias > a > button:hover, .botonesFinal > a > button:hover{    
+/* .categorias > a > button:hover, .botonesFinal > a > button:hover{    
     background-color: #46C68C;
     color: #fff;
-}
+} */
 
-.recomendaciones1 > .prevencion > h1, .recomendaciones1 > .mejoras > h1{
+/* .recomendaciones1 > .prevencion > h1, .recomendaciones1 > .mejoras > p{
     text-align: center;
     padding-bottom: 15px;
 }
 
-.recomendaciones2 > .acciones > h1, .recomendaciones1 > .experto > h1{
+.recomendaciones2 > .acciones > h1, .recomendaciones2 > .experto > h1{
     text-align: center;
     padding-bottom: 15px;
 }
@@ -326,10 +326,10 @@ button{
     margin-bottom: 225px;
 }
 
-.recomendaciones1 > .experto > button:hover{
+.recomendaciones2 > .experto > button:hover{
     background-color: #46C68C;
     color: #fff;
-}
+} */
 
 .form-check-label > .form-check-input{
     border: 0px;

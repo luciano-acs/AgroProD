@@ -4,9 +4,11 @@
 
 {% block menu %}
 <div class="bienvenidaUsuario">
+    {% for agric in agricultor %}
     <div>
-        <h1 id="tituloUsuario">Bienvenido Pepito</h1>
+        <h1 id="tituloUsuario">Bienvenido {{ agric.nombre }}</h1>
     </div>
+    {% endfor %}
     <div class="imagenUsuario">
         <img src="" alt="">
     </div>
@@ -14,17 +16,26 @@
 {% endblock %}
 
 {% block contenido %}
+{% for a in agricultor %}
 <div class="row justify-content-center datosUsuario">
     <div class="col-4 formDatos">
         <form class="formDatosMuestra">
             <h1>DATOS</h1>
-            <label for="">Nombre <input type="text" required></label>
+            <label for="">Nombre <input type="text" value="{{ a.nombre }}" disabled></label>
+            {% for u in ubicacion %}
             <label for="">Ubicación
-                <select name="" id=""></select>
+                <select name="" id="">
+                    <option>{{ u.latitud }},{{ u.longitud }}</option>
+                </select>
             </label>
+            {% endfor %}
+            {% for c in cultivo %}
             <label for="">Cultivo
-                <select name="" id=""></select>
+                <select name="" id="">
+                    <option>{{ c.nombre }}</option>
+                </select>
             </label>
+            {% endfor %}
             <div class="form-check form-switch">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Imagenes Aereas
                     <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"></label>
@@ -41,6 +52,7 @@
     </div>
 </div>
 <div class="row botonesFinal">
-    <a href=""><button>CERRAR SESION</button></a>
+    <a href="{% url 'index' %}"><button>CERRAR SESION</button></a>
 </div>
+{% endfor %}
 {% endblock %}

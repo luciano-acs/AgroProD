@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-
+from .models import *
 # Create your views here.
 
 def index(request):
@@ -10,7 +10,11 @@ def ingresar(request):
     return render(request, 'paginas/ingresar.html')
 
 def perfil(request):
-    return render(request, 'paginas/perfil.html')
+    agricultor = Agricultor.objects.all()
+    cultivo = Cultivo.objects.all()
+    ubicacion = Ubicacion.objects.all()
+    print(agricultor)
+    return render(request, 'paginas/perfil.html', {'agricultor': agricultor, 'cultivo': cultivo, 'ubicacion': ubicacion})
 
 def datosMeteorologicos(request):
     return render(request, 'paginas/datosMeteorologicos.html')
