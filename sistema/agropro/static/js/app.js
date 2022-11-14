@@ -3,22 +3,14 @@ const cuentaUsuario = {
     contraseña: 'admin'
 };
 
-const ingresar = document.getElementById('ingresarPerfil');
-if (ingresar) {
-    ingresar.addEventListener('click', function () {
-        const usuario = document.getElementById('usuario').value;
-        const password = document.getElementById('password').value;
-        if (usuario == cuentaUsuario.usuario && password == cuentaUsuario.contraseña) {            
-            window.location.href = "/" + "perfil";
-            // rellenarDatos();
-        } else {
-            alert('Usuario o contraseña incorrectos');
-        }
-    });
-}
-
-function rellenarDatos(){
-    document.getElementById('tituloUsuario').innerHTML = cuentaUsuario.usuario;
+function login() {
+    const usuario = document.getElementById('usuario').value;
+    const password = document.getElementById('password').value;
+    if (usuario == cuentaUsuario.usuario && password == cuentaUsuario.contraseña) {
+        window.location.href = "/" + "perfil";
+    } else {
+        alert('Usuario o contraseña incorrectos');
+    }
 }
 
 function cargarTablaTemp() {
